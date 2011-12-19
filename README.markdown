@@ -51,7 +51,7 @@ Visit the [Pyposterous documentation](http://thomasw.github.com/pyposterous/) si
         except AttributeError:
             pass # No comments
     print "--------------------"
-    
+
 Methods that require authentication will throw an exception.
 
     try:
@@ -64,7 +64,7 @@ You'll need to instantiate your own api object to specify a username and passwor
     api = pyposterous.API(username='username', password='password')
 
     sites = api.get_sites()
-    print [site.__dict__ for site in sites] 
+    print [site.__dict__ for site in sites]
 
     tags = sites[0].get_tags()
     print [str(tag) for tag in tags]
@@ -83,7 +83,7 @@ In order to use the Twitter based Posterous methods, you'll need to instantiate 
 
 	from pyposterous.auth import TwitterAuth
 	api = pyposterous.API(auth=TwitterAuth("consumer_key", "consumer_secret", "user_key", "user_secret"))
-	
+
 	post = api.upload(message="This is the title.", body="This is the post body.")
     print post.url
 
@@ -95,4 +95,3 @@ I looked to [Tweepy](http://github.com/joshthecoder/tweepy) a lot while writing 
 [urllib2_file](http://github.com/seisen/urllib2_file) saved me a lot of time and trouble. Kudos to [seisen](http://github.com/seisen).
 
 Copyright (c) 2010 [Thomas Welfley](http://cyproject.net/). See [LICENSE](http://github.com/thomasw/pyposterous/blob/master/LICENSE) for details.
-    

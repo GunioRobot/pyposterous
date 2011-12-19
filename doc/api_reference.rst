@@ -101,7 +101,7 @@ Exceptions
 ==========
 
 .. autoexception:: pyposterous.error.PyposterousError
-	
+
 	.. attribute:: error_code
 	.. attribute:: error_message
 
